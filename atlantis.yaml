@@ -1,0 +1,23 @@
+---
+terraform_version: 0.11.1 # optional version
+pre_init:
+  commands:
+  - "echo a=$DIR"
+  - "echo b=$ATLANTIS_TERRAFORM_VERSION"
+  - "echo c=$WORKSPACE"
+pre_plan:
+  commands:
+  - "curl http://example.com"
+post_plan:
+  commands:
+  - "curl http://example.com"
+pre_apply:
+  commands:
+  - "curl http://example.com"
+post_apply:
+  commands:
+  - "curl http://example.com"
+#extra_arguments:
+#  - command_name: plan
+#    arguments:
+#    - "-tfvars=myvars.tfvars"
