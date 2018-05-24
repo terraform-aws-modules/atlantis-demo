@@ -1,5 +1,4 @@
 ---
-terraform_version: 0.11.1 # optional version
 pre_init:
   commands:
   - "echo a=$DIR"
